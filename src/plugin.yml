@@ -1,0 +1,4 @@
+name: pBase
+version: 0.0.1
+api-version: 1.13.2
+main: net.pyshicon.pbase.Main
