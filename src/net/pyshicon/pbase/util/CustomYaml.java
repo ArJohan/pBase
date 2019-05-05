@@ -1,6 +1,5 @@
 package net.pyshicon.pbase.util;
 
-import net.pyshicon.pbase.Main;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -12,8 +11,8 @@ public class CustomYaml {
     private File file;
     private YamlConfiguration yaml;
 
-    public CustomYaml(String yaml_path, String yaml_name) {
-        file = new File(JavaPlugin.getPlugin(Main.class).getDataFolder() + yaml_path, yaml_name + ".yml");
+    public CustomYaml(JavaPlugin javaPlugin, String yaml_path, String yaml_name) {
+        file = new File(javaPlugin.getDataFolder() + yaml_path, yaml_name + ".yml");
         yaml = YamlConfiguration.loadConfiguration(file);
     }
 
